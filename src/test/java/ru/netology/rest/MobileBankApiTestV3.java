@@ -24,26 +24,7 @@ class MobileBankApiTestV3 {
                 .contentType(ContentType.JSON)
                 .body("", hasSize(3))
                 .body("[0].currency", equalTo("RUB"))
-                .body("[1].currency", equalTo("USD"))
                 .body("[0].balance", greaterThanOrEqualTo(0))
         ;
     }
-//    @Test
-//    void shouldReturnFailDemoAccounts() {
-//
-//        given()
-//                .baseUri("http://localhost:9999/api/v1")
-//
-//                .when()
-//                .get("/demo/accounts")
-//
-//                .then()
-//                .statusCode(200)
-//
-//                .contentType(ContentType.JSON)
-//                .body("", hasSize(3))
-//                .body("[0].currency", equalTo("RUR"))
-//                .body("[0].balance", greaterThanOrEqualTo(0))
-//        ;
-//    }
 }
